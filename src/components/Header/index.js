@@ -14,6 +14,7 @@ const HeaderContainer = styled.header`
   z-index: 9;
 
   h1 {
+    font-size: 14px;
     margin: 0;
   }
 
