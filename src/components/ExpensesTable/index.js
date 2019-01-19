@@ -41,7 +41,7 @@ class ExpensesTable extends PureComponent {
       title: 'Tags',
       dataIndex: 'tags',
       key: 'tags',
-      render: (text, record) => record.tags.join(', '),
+      render: (text, record) => record.tags && record.tags.join(', '),
     }, {
       title: 'Date',
       dataIndex: 'date',
