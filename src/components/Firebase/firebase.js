@@ -13,7 +13,6 @@ const config = {
 };
 
 class Firebase {
-
   constructor() {
     app.initializeApp(config);
 
@@ -25,18 +24,18 @@ class Firebase {
     return this.auth.signInWithPopup(new app.auth.GoogleAuthProvider());
   }
 
-  getExpenses = () => this.db.ref('test');
-  addExpense = e => this.db.ref('test').push(e);
+  getExpenses = () => this.db.ref('transactions');
+  addExpense = e => this.db.ref('transactions').push(e);
   updateExpense = async (uuid, e) => {
     try {
-      await this.db.ref('test').child(uuid).update(e);
+      await this.db.ref('transactions').child(uuid).update(e);
       return true;
     } catch (error) {
       console.error(error);
       return false;
     }
   }
-  deleteExpense = uuid => this.db.ref('test').child(uuid).remove();
+  deleteExpense = uuid => this.db.ref('transactions').child(uuid).remove();
 
   getTags = () => this.db.ref('tags');
   addTag = title => this.db.ref('tags').push({ title, created: moment().format() });
