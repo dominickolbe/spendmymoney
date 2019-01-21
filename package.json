@@ -1,6 +1,9 @@
 {
   "name": "spendmymoney",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "repository": "git@github.com:dominickolbe/spendmymoney.git",
+  "author": "Dominic Kolbe <kolbedominic@gmail.com",
+  "license": "MIT",
   "dependencies": {
     "antd": "^3.11.6",
     "dayjs": "^1.7.8",
