@@ -47,9 +47,10 @@ class AddTransaction extends Component {
     const { expense } = this.state;
     this.props.firebase.addExpense(expense);
 
-    notification.open({
+    notification.success({
       message: 'Expense',
-      description: 'successfully saved'
+      description: 'successfully saved',
+      placement: 'bottomRight',
     });
   }
 
